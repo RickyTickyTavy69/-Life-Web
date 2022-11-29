@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.helper{
+    display: none;
+}
+
+.formField{
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    margin: 5vh 0 5vh 0;
+    align-items: center;
+}
+
+.formField input{
+    padding: 10px 5px;
+}
+
+.container button{
+    padding: 10px 20px;
+}
