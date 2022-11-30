@@ -9,6 +9,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Dashboard from "./components/Dashboard/Dashboard.jsx";
 import Navigation from "./components/Header/Navigation/Navigation.jsx";
 import Auth from "./components/Auth/Auth.jsx";
+import Validate from "./components/Auth/Validate/Validate.jsx";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Routes>
             <Route path="/dashboard" element={<Dashboard/>}/>
             <Route path="/" element={!auth && <Auth/>} />
+            <Route path="/validate" element={<Validate/>}/>
         </Routes>
     </div>
       </BrowserRouter>

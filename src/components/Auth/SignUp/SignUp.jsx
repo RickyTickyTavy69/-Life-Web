@@ -1,10 +1,14 @@
 import styles from "./signup.module.css";
-import {useState} from "react";
+
+//navigation
+import {useNavigate} from "react-router-dom";
 
 //formik
 import {useFormik} from "formik";
 
 const SignUp = () => {
+    //navigation
+    const navigate = useNavigate();
 
     // handle signUp with formik
     const formik = useFormik({
@@ -23,6 +27,12 @@ const SignUp = () => {
             });
             const result = await response.json();
             console.log("result", result);
+            if(result.ok){
+                console.log("user was created");
+                navigate("/validate");
+            } else if (!result.ok){
+                alert("an error occurred while signing up...");
+            }
         }
     })
 
